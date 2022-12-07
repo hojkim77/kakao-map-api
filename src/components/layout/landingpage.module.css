@@ -1,0 +1,13 @@
+.landingpage{
+    display: flex;
+
+}
+.input{
+    position: absolute;
+    top: 190px;
+    left: 630px;
+    z-index: 2;
+}
+.map{
+    z-index: 1;
+}
