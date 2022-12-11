@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
+import Clouds from '../weatherimg/03d@2x.png';
+import Clear from '../weatherimg/01d@2x.png';
+import Thunderstorm from '../weatherimg/11d@2x.png';
+import Rain from '../weatherimg/09d@2x.png';
+import Snow from '../weatherimg/13d@2x.png';
+import Atmosphere from '../weatherimg/50d@2x.png';
+
 
 const API_KEY = "e862b7b1a840ae3919413a67d1fa2be9";
-
 const Weather = ({ center, end }) => {
     const [weather, setWeather] = useState("");
 
@@ -22,10 +28,19 @@ const Weather = ({ center, end }) => {
             });
         });
     },[center])
+    
     return(
         <div>
-            <div>
+            <div >
                 <h1>{weather.temperature}</h1>
+                {
+                    weather.main === "Clouds" ? (<h1><img src = {Clouds} alt="Clouds"/></h1>) :
+                    weather.main === "Clear" ? (<h1><img src = {Clear} alt="Clear" /></h1>) : 
+                    weather.main === "Thunderstorm" ? (<h1><img src={Thunderstorm} alt="Thunderstorm" /></h1>):
+                    weather.main === "Rain" ?  (<h1><img src={Rain} alt="Rain"/></h1>):
+                    weather.main === "Snow" ? (<h1><img src={Snow} alt = "Snow"/></h1>):
+                    weather.main === "Atmosphere" ? (<h1><img src ={Atmosphere} alt="Atmosphere"/></h1>): null
+                }
             </div>
         </div>
     )
