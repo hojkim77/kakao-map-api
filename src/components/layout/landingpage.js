@@ -10,6 +10,7 @@ function LandingPage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [centerps, setCenterps] = useState("")
   const [endps, setEndps] = useState("")
+  const [main, setMain] = useState("")
   const onChange = (e) => {
     setInputText(e.target.value)
   }
@@ -32,7 +33,10 @@ function LandingPage() {
   const setendPosition = (prop) => {
     setEndps(prop);
   };
-
+  const setmainWeather = (prop)=> {
+    setMain(prop);
+    //console.log(main);
+  }
   return (
     <>
       <div className={styles.landingPage}>
@@ -42,8 +46,8 @@ function LandingPage() {
         </form>
         <MapContainer searchPlace={Place} setcenterPosition={setcenterPosition}
         setendPosition={setendPosition} propModal={openModal} className={styles.map}/>
-        <Modal open={modalOpen} close={closeModal} header="Modal heading" centerps={centerps} endps={endps}>
-          <Weather center={centerps} end={endps} />
+        <Modal open={modalOpen} close={closeModal} header="Modal heading" centerps={centerps} endps={endps} main={main}>
+          <Weather center={centerps} end={endps} setmainWeather={setmainWeather}/>
         </Modal>
       </div>
       

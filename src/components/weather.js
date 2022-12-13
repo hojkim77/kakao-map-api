@@ -6,10 +6,11 @@ import Thunderstorm from '../weatherimg/11d@2x.png';
 import Rain from '../weatherimg/09d@2x.png';
 import Snow from '../weatherimg/13d@2x.png';
 import Atmosphere from '../weatherimg/50d@2x.png';
+import styles from "./weather.module.css";
 
 
 const API_KEY = "e862b7b1a840ae3919413a67d1fa2be9";
-const Weather = ({ center, end }) => {
+const Weather = ({ center, end, setmainWeather }) => {
     const [weather, setWeather] = useState("");
 
     const lat = center.Ma;
@@ -27,12 +28,13 @@ const Weather = ({ center, end }) => {
             loading: false,
             });
         });
-    },[center])
-    
+    },[center, setmainWeather])
+    setmainWeather(weather.main);
+
     return(
         <div>
-            <div >
-                <h1>{weather.temperature}</h1>
+            <div className={styles.weather} >
+                <h1 className={styles.weathertext}>{weather.temperature}</h1>
                 {
                     weather.main === "Clouds" ? (<h1><img src = {Clouds} alt="Clouds"/></h1>) :
                     weather.main === "Clear" ? (<h1><img src = {Clear} alt="Clear" /></h1>) : 

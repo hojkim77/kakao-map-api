@@ -6,7 +6,7 @@ const Modal = (props) => {
   const { open, close, header } = props;
   useEffect(() => {
     console.log(props.children.props);
-  }, [props])
+  }, [props.children.main]);
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
     <div className={open ? `${styles.modal} ${styles.openModal}` : styles.modal }>
