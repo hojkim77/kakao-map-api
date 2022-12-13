@@ -3,6 +3,7 @@ import MapContainer from '../mapcontainer'
 import styles from "./landingpage.module.css";
 import Modal from '../modal/modal';
 import Weather from '../weather'
+import Modalef from '../modal/modaleffect';
 
 function LandingPage() {
   const [InputText, setInputText] = useState('')
@@ -46,9 +47,11 @@ function LandingPage() {
         </form>
         <MapContainer searchPlace={Place} setcenterPosition={setcenterPosition}
         setendPosition={setendPosition} propModal={openModal} className={styles.map}/>
-        <Modal open={modalOpen} close={closeModal} header="Modal heading" centerps={centerps} endps={endps} main={main}>
+        <Modal open={modalOpen} close={closeModal} header="Modal heading" centerps={centerps} endps={endps}>
           <Weather center={centerps} end={endps} setmainWeather={setmainWeather}/>
-        </Modal>
+          <Modalef main={main}/>
+        </Modal >
+
       </div>
       
     </>
