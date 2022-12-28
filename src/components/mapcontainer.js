@@ -16,7 +16,7 @@ const MapContainer = ({ searchPlace, setcenterPosition, setendPosition ,propModa
     const container = document.getElementById('myMap')
     const options = {
       center: new kakao.maps.LatLng(33.450701, 126.570667), // 중심 좌표
-      level: 10,
+      level: 15,
     }
     
     //' 지도 생성 '
