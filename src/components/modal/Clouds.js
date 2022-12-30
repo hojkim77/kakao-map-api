@@ -34,23 +34,10 @@ function Cloudflake(props){
         </div>
     )
 }
+
 function Clouds(){
     const arr = Array.from('111111111111');
 
-    
-    /*function makeclouds(){
-        var arr = []
-        
-        var cloud = React.createElement("img", {src:cloud1});
-        var a = React.createElement("div",{ position:'absolute', 
-        left:Math.random() * (innerWidth - 100) + 'px',
-        top:Math.random() * (innerHeight - 100) + 'px'}, [cloud]);
-        for (var i = 0; i < 5;i++){
-            arr.push(a);
-        }
-        return(arr);
-    }
-    */
     return(
         <div>
             {

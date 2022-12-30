@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import Snowfall from 'react-snowfall'
 import Clouds from './Clouds';
-
+import Sunshine from './Sunshine'
 const Modalef = (main) => {
     
     return (
     <div>
         {main.main === "Snow" ? <Snowfall /> : 
          main.main === "Clouds"? <Clouds /> :
+         main.main === "Clear" ? <Sunshine />:
          null}
     </div>
     );

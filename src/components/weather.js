@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import Clouds from '../weatherimg/03d@2x.png';
-import Clear from '../weatherimg/01d@2x.png';
-import Thunderstorm from '../weatherimg/11d@2x.png';
-import Rain from '../weatherimg/09d@2x.png';
-import Snow from '../weatherimg/13d@2x.png';
-import Atmosphere from '../weatherimg/50d@2x.png';
+import Clouds from './weatherimg/03d@2x.png';
+import Clear from './weatherimg/01d@2x.png';
+import Thunderstorm from './weatherimg/11d@2x.png';
+import Rain from './weatherimg/09d@2x.png';
+import Snow from './weatherimg/13d@2x.png';
+import Atmosphere from './weatherimg/50d@2x.png';
 import styles from "./weather.module.css";
 
 
