@@ -10,11 +10,11 @@ const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5];
 const {innerWidth, innerHeight} = window; //화면 크기 구하기
 
 function Cloudflake(props){
-    const [hover, setHover] = useState('');
+    /*const [hover, setHover] = useState('');
     function mousehover(e) {
         console.log(hover);
         setHover(true);
-    }
+    }*/
     const r = Math.floor(Math.random() * 5);
     const rw = Math.random() * (300 - 200) + 200;
     const rh = Math.random() * (300 - 200) + 200;
@@ -29,7 +29,6 @@ function Cloudflake(props){
                 4 <= props.id < 8 ? styles.cloud2 :
                 styles.cloud3
                 }
-             
             />
         </div>
     )
