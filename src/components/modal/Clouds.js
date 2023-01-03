@@ -24,11 +24,10 @@ function Cloudflake(props){
             left:Math.random() * (innerWidth - 100) + 'px',
             top:Math.random() * (innerHeight - 100) + 'px',
             zIndex:100}}>
-            <img src={clouds[r]} className={
-                0 <= props.id < 4 ? styles.cloud1 :
-                4 <= props.id < 8 ? styles.cloud2 :
-                styles.cloud3
-                }
+            <img src={clouds[r]} className={`${
+                0 <= props.id && props.id < 4 ? styles.cloud1 :
+                4 <= props.id && props.id < 7 ?  styles.cloud2 :
+                styles.cloud3}`}
             />
         </div>
     )
